@@ -1,0 +1,18 @@
+import React, { useState } from 'react'
+
+function A() {
+    const [count,setCount]=useState(0);
+
+    if(count==4)
+    {
+        throw new Error("count ko sahi karle ")
+    }
+
+  return (
+    <div>
+        <h1 onClick={()=> setCount (count+1)}>count is{count}</h1>
+    </div>
+  )
+}
+
+export default A
